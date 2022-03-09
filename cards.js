@@ -1,4 +1,4 @@
-let cards = [
+const cards = [
     {
     code: "9C",
     image: "https://deckofcardsapi.com/static/img/9C.png",
@@ -6,7 +6,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/9C.svg",
     png: "https://deckofcardsapi.com/static/img/9C.png"
     },
-    value: "9",
+    value: 9,
     suit: "CLUBS"
     },
     {
@@ -16,7 +16,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/3D.svg",
     png: "https://deckofcardsapi.com/static/img/3D.png"
     },
-    value: "3",
+    value: 3,
     suit: "DIAMONDS"
     },
     {
@@ -26,7 +26,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/6D.svg",
     png: "https://deckofcardsapi.com/static/img/6D.png"
     },
-    value: "6",
+    value: 6,
     suit: "DIAMONDS"
     },
     {
@@ -36,7 +36,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/5S.svg",
     png: "https://deckofcardsapi.com/static/img/5S.png"
     },
-    value: "5",
+    value: 5,
     suit: "SPADES"
     },
     {
@@ -46,7 +46,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/0C.svg",
     png: "https://deckofcardsapi.com/static/img/0C.png"
     },
-    value: "10",
+    value: 10,
     suit: "CLUBS"
     },
     {
@@ -56,7 +56,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/QD.svg",
     png: "https://deckofcardsapi.com/static/img/QD.png"
     },
-    value: "QUEEN",
+    value: 10,
     suit: "DIAMONDS"
     },
     {
@@ -66,7 +66,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/QC.svg",
     png: "https://deckofcardsapi.com/static/img/QC.png"
     },
-    value: "QUEEN",
+    value: 10,
     suit: "CLUBS"
     },
     {
@@ -76,7 +76,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/AS.svg",
     png: "https://deckofcardsapi.com/static/img/AS.png"
     },
-    value: "ACE",
+    value: 11,
     suit: "SPADES"
     },
     {
@@ -86,7 +86,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/5C.svg",
     png: "https://deckofcardsapi.com/static/img/5C.png"
     },
-    value: "5",
+    value: 5,
     suit: "CLUBS"
     },
     {
@@ -96,7 +96,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/5D.svg",
     png: "https://deckofcardsapi.com/static/img/5D.png"
     },
-    value: "5",
+    value: 5,
     suit: "DIAMONDS"
     },
     {
@@ -106,7 +106,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/7C.svg",
     png: "https://deckofcardsapi.com/static/img/7C.png"
     },
-    value: "7",
+    value: 7,
     suit: "CLUBS"
     },
     {
@@ -116,7 +116,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/KD.svg",
     png: "https://deckofcardsapi.com/static/img/KD.png"
     },
-    value: "KING",
+    value: 10,
     suit: "DIAMONDS"
     },
     {
@@ -126,7 +126,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/KH.svg",
     png: "https://deckofcardsapi.com/static/img/KH.png"
     },
-    value: "KING",
+    value: 10,
     suit: "HEARTS"
     },
     {
@@ -136,7 +136,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/4H.svg",
     png: "https://deckofcardsapi.com/static/img/4H.png"
     },
-    value: "4",
+    value: 4,
     suit: "HEARTS"
     },
     {
@@ -146,7 +146,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/QS.svg",
     png: "https://deckofcardsapi.com/static/img/QS.png"
     },
-    value: "QUEEN",
+    value: 10,
     suit: "SPADES"
     },
     {
@@ -156,7 +156,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/aceDiamonds.svg",
     png: "https://deckofcardsapi.com/static/img/aceDiamonds.png"
     },
-    value: "ACE",
+    value: 11,
     suit: "DIAMONDS"
     },
     {
@@ -166,7 +166,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/4C.svg",
     png: "https://deckofcardsapi.com/static/img/4C.png"
     },
-    value: "4",
+    value: 4,
     suit: "CLUBS"
     },
     {
@@ -176,7 +176,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/8C.svg",
     png: "https://deckofcardsapi.com/static/img/8C.png"
     },
-    value: "8",
+    value: 8,
     suit: "CLUBS"
     },
     {
@@ -186,7 +186,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/7H.svg",
     png: "https://deckofcardsapi.com/static/img/7H.png"
     },
-    value: "7",
+    value: 7,
     suit: "HEARTS"
     },
     {
@@ -196,7 +196,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/0S.svg",
     png: "https://deckofcardsapi.com/static/img/0S.png"
     },
-    value: "10",
+    value: 10,
     suit: "SPADES"
     },
     {
@@ -206,7 +206,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/4S.svg",
     png: "https://deckofcardsapi.com/static/img/4S.png"
     },
-    value: "4",
+    value: 4,
     suit: "SPADES"
     },
     {
@@ -216,7 +216,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/0D.svg",
     png: "https://deckofcardsapi.com/static/img/0D.png"
     },
-    value: "10",
+    value: 10,
     suit: "DIAMONDS"
     },
     {
@@ -226,7 +226,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/KC.svg",
     png: "https://deckofcardsapi.com/static/img/KC.png"
     },
-    value: "KING",
+    value: 10,
     suit: "CLUBS"
     },
     {
@@ -236,7 +236,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/6C.svg",
     png: "https://deckofcardsapi.com/static/img/6C.png"
     },
-    value: "6",
+    value: 6,
     suit: "CLUBS"
     },
     {
@@ -246,7 +246,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/9D.svg",
     png: "https://deckofcardsapi.com/static/img/9D.png"
     },
-    value: "9",
+    value: 9,
     suit: "DIAMONDS"
     },
     {
@@ -256,7 +256,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/8D.svg",
     png: "https://deckofcardsapi.com/static/img/8D.png"
     },
-    value: "8",
+    value: 8,
     suit: "DIAMONDS"
     },
     {
@@ -266,7 +266,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/3H.svg",
     png: "https://deckofcardsapi.com/static/img/3H.png"
     },
-    value: "3",
+    value: 3,
     suit: "HEARTS"
     },
     {
@@ -276,7 +276,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/2D.svg",
     png: "https://deckofcardsapi.com/static/img/2D.png"
     },
-    value: "2",
+    value: 2,
     suit: "DIAMONDS"
     },
     {
@@ -286,7 +286,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/4D.svg",
     png: "https://deckofcardsapi.com/static/img/4D.png"
     },
-    value: "4",
+    value: 4,
     suit: "DIAMONDS"
     },
     {
@@ -296,7 +296,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/8S.svg",
     png: "https://deckofcardsapi.com/static/img/8S.png"
     },
-    value: "8",
+    value: 8,
     suit: "SPADES"
     },
     {
@@ -306,7 +306,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/AH.svg",
     png: "https://deckofcardsapi.com/static/img/AH.png"
     },
-    value: "ACE",
+    value: 11,
     suit: "HEARTS"
     },
     {
@@ -316,7 +316,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/KS.svg",
     png: "https://deckofcardsapi.com/static/img/KS.png"
     },
-    value: "KING",
+    value: 10,
     suit: "SPADES"
     },
     {
@@ -326,7 +326,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/QH.svg",
     png: "https://deckofcardsapi.com/static/img/QH.png"
     },
-    value: "QUEEN",
+    value: 10,
     suit: "HEARTS"
     },
     {
@@ -336,7 +336,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/2H.svg",
     png: "https://deckofcardsapi.com/static/img/2H.png"
     },
-    value: "2",
+    value: 2,
     suit: "HEARTS"
     },
     {
@@ -346,7 +346,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/6S.svg",
     png: "https://deckofcardsapi.com/static/img/6S.png"
     },
-    value: "6",
+    value: 6,
     suit: "SPADES"
     },
     {
@@ -356,7 +356,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/7S.svg",
     png: "https://deckofcardsapi.com/static/img/7S.png"
     },
-    value: "7",
+    value: 7,
     suit: "SPADES"
     },
     {
@@ -366,7 +366,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/2S.svg",
     png: "https://deckofcardsapi.com/static/img/2S.png"
     },
-    value: "2",
+    value: 2,
     suit: "SPADES"
     },
     {
@@ -376,7 +376,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/JS.svg",
     png: "https://deckofcardsapi.com/static/img/JS.png"
     },
-    value: "JACK",
+    value: 10,
     suit: "SPADES"
     },
     {
@@ -386,7 +386,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/9S.svg",
     png: "https://deckofcardsapi.com/static/img/9S.png"
     },
-    value: "9",
+    value: 9,
     suit: "SPADES"
     },
     {
@@ -396,7 +396,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/2C.svg",
     png: "https://deckofcardsapi.com/static/img/2C.png"
     },
-    value: "2",
+    value: 2,
     suit: "CLUBS"
     },
     {
@@ -406,7 +406,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/9H.svg",
     png: "https://deckofcardsapi.com/static/img/9H.png"
     },
-    value: "9",
+    value: 9,
     suit: "HEARTS"
     },
     {
@@ -416,7 +416,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/3S.svg",
     png: "https://deckofcardsapi.com/static/img/3S.png"
     },
-    value: "3",
+    value: 3,
     suit: "SPADES"
     },
     {
@@ -426,7 +426,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/AC.svg",
     png: "https://deckofcardsapi.com/static/img/AC.png"
     },
-    value: "ACE",
+    value: 11,
     suit: "CLUBS"
     },
     {
@@ -436,7 +436,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/7D.svg",
     png: "https://deckofcardsapi.com/static/img/7D.png"
     },
-    value: "7",
+    value: 7,
     suit: "DIAMONDS"
     },
     {
@@ -446,7 +446,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/JD.svg",
     png: "https://deckofcardsapi.com/static/img/JD.png"
     },
-    value: "JACK",
+    value: 10,
     suit: "DIAMONDS"
     },
     {
@@ -456,7 +456,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/3C.svg",
     png: "https://deckofcardsapi.com/static/img/3C.png"
     },
-    value: "3",
+    value: 3,
     suit: "CLUBS"
     },
     {
@@ -466,7 +466,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/0H.svg",
     png: "https://deckofcardsapi.com/static/img/0H.png"
     },
-    value: "10",
+    value: 10,
     suit: "HEARTS"
     },
     {
@@ -476,7 +476,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/JC.svg",
     png: "https://deckofcardsapi.com/static/img/JC.png"
     },
-    value: "JACK",
+    value: 10,
     suit: "CLUBS"
     },
     {
@@ -486,7 +486,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/6H.svg",
     png: "https://deckofcardsapi.com/static/img/6H.png"
     },
-    value: "6",
+    value: 6,
     suit: "HEARTS"
     },
     {
@@ -496,7 +496,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/JH.svg",
     png: "https://deckofcardsapi.com/static/img/JH.png"
     },
-    value: "JACK",
+    value: 10,
     suit: "HEARTS"
     },
     {
@@ -506,7 +506,7 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/5H.svg",
     png: "https://deckofcardsapi.com/static/img/5H.png"
     },
-    value: "5",
+    value: 5,
     suit: "HEARTS"
     },
     {
@@ -516,7 +516,24 @@ let cards = [
     svg: "https://deckofcardsapi.com/static/img/8H.svg",
     png: "https://deckofcardsapi.com/static/img/8H.png"
     },
-    value: "8",
+    value: 8,
     suit: "HEARTS"
     }
     ]
+
+
+
+function shuffle(cards){
+    for(let i = cards.length -1; i > 0;i--){
+        let x = Math.floor(Math.random()*(i +1));
+        let temp = cards[i];
+        cards[i] = cards[x];
+        cards[x] = temp;
+        }
+        return cards
+}
+
+const newDeck = shuffle(cards)
+//    console.log(newDeck)
+   
+   

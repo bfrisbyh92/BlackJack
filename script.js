@@ -1,24 +1,8 @@
-let url = ('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
-console.log(cards)
-//  ^^ shows the array of cards in console
+console.log(newDeck[0].value)
+console.log(newDeck[1])
+console.log(newDeck)
+// I have an array obj cards. A function shuffle() that shuffles cards obj when called
 
 
-let newDeck = function newDeck(){
-    fetch(url)
-    .then (res => { return res.json()})
-    .then(data => {
-        let obj = data
-        let deckID = obj.deck_id
-        console.log(data.deck_id)
-        console.log(data)
-    })
-}
-newDeck()
 
-// let drawOne = function drawOne(){
-//     fetch('https://deckofcardsapi.com/api/"+deckID+"/"+/draw/?count=2')
-// .then(res => {return res.json()})
-// .then (data => console.log(data))
-// }
-// drawOne()
 
