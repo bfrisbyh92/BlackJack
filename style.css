@@ -6,16 +6,33 @@ body {
     grid-template-areas: 'player2-score header player1-score'
     'deck player1-card-slot1 player2-card-slot1' 
     'deck player1-card-slot2 player2-card-slot2'
-    'deck player1-card2 player2-card2'
-    'options options reset';
-    gap: 18vh;
-    align-items: center;
+    'current-value-player1 player1-card2 player2-card2'
+    'current-value-player2 options reset';
+    gap: 10vh;
+    justify-content: center;
+    padding-top: 3rem;
+    /* align-items: center; */
+    width: fit-content;
+    block-size: fit-content;
     background-image: url("https://static8.depositphotos.com/1003924/908/i/950/depositphotos_9083070-stock-photo-green-poker-table-felt-background.jpg");
-}
+} 
+
+
 
 h1 {
     color: aliceblue;
     grid-area: header ;
+}
+.currentValue-player2 {
+    grid-area: current-value-player2;
+    border: 8px solid white;
+    color: white;
+}
+
+.currentValue-player1 {
+    grid-area: current-value-player1;
+    border: 8px solid white;
+    color: white;
 }
 
 .player2-score {
@@ -62,7 +79,6 @@ h1 {
 
 
 
-
 #reset {
     background-color: blue;
     color:aliceblue;
@@ -70,7 +86,6 @@ h1 {
     padding: 8px;
     border: 3px solid black;
     cursor: pointer;
-
 }
 
 #hit {

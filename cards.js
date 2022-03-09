@@ -522,18 +522,17 @@ const cards = [
     ]
 
 
-
-function shuffle(cards){
-    for(let i = cards.length -1; i > 0;i--){
-        let x = Math.floor(Math.random()*(i +1));
-        let temp = cards[i];
-        cards[i] = cards[x];
-        cards[x] = temp;
-        }
-        return cards
-}
-
-const newDeck = shuffle(cards)
-//    console.log(newDeck)
+    function shuffle(cards){
+        for(let i = cards.length -1; i > 0;i--){
+            let x = Math.floor(Math.random()*(i +1));
+            let temp = cards[i];
+            cards[i] = cards[x];
+            cards[x] = temp;
+            }
+            return cards
+    }
+    
+    const newDeck = shuffle(cards)
+    //    console.log(newDeck)
    
    
