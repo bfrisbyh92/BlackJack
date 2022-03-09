@@ -1,4 +1,92 @@
 body {
-    background-color: green;
+    background-color: rgb(82, 173, 82);
     text-align: center;
+    margin: 10px;
+    display: grid;
+    grid-template-areas: 'player2-score header player1-score'
+    'deck player1-card-slot1 player2-card-slot1' 
+    'deck player1-card-slot2 player2-card-slot2'
+    'deck player1-card2 player2-card2'
+    'options options reset';
+    gap: 18vh;
+    align-items: center;
+    background-image: url("https://static8.depositphotos.com/1003924/908/i/950/depositphotos_9083070-stock-photo-green-poker-table-felt-background.jpg");
+}
+
+h1 {
+    color: aliceblue;
+    grid-area: header ;
+}
+
+.player2-score {
+    grid-area: player2-score;
+    border: 8px solid white;
+    color: white;
+}
+
+.player1-score {
+    grid-area: player1-score;
+    border: 8px solid white;
+    color: white;
+}
+
+.player1.card-slot1 {
+    grid-area: player1-card-slot1;
+    border: 8px solid white;
+    color: white;
+}
+
+.player1.card-slot2 {
+    grid-area: player1-card-slot2;
+    border: 8px solid white;
+    color: white;
+}
+
+.player2.card-slot1 {
+    grid-area: player2-card-slot1;
+    border: 8px solid white;
+    color: white;
+}
+
+.player2.card-slot2 {
+    grid-area: player2-card-slot2;
+    border: 8px solid white;
+    color: white;
+}
+
+.deck {
+    grid-area: deck;
+    border: 8px solid white;
+    color: white;
+}
+
+
+
+
+#reset {
+    background-color: blue;
+    color:aliceblue;
+    border-radius: 15px;
+    padding: 8px;
+    border: 3px solid black;
+    cursor: pointer;
+
+}
+
+#hit {
+    background-color: red;
+    color:aliceblue;
+    border-radius: 15px;
+    padding: 8px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+#stay {
+    background-color: rgb(104, 104, 87);
+    color:aliceblue;
+    border-radius: 15px;
+    padding: 8px;
+    border: 3px solid black;
+    cursor: pointer;
 }
