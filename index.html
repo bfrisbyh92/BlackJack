@@ -13,26 +13,28 @@
     
     <h1>Black-Jack</h1>
 
-
+<div class="container">
     <div class="deck">Deck</div>
     <div class="player1-score">Player1 Score</div>
+    <div class="currentValue-player1">Value of Player one hand</div>
     <div class="player1 card-slot1">Player One card slot one</div>
     <div class="player1 card-slot2">Player One card slot two</div>
     <div class="player2-score">Player Two Score</div>
+    <div class="currentValue-player2">Value of Player two hand</div>
     <div class="player2 card-slot1">Player two card slot one</div>
     <div class="player2 card-slot2">Player two card slot two</div>
-    <div class="currentValue-player1">Value of Player one hand</div>
-    <div class="currentValue-player2">Value of Player two hand</div>
-    
+    </div>
     
 
 
 <footer>
     <div class="options">
-    <button id="hit">Draw</button>
+    <button id="p1hit" onclick="p1drawOne()">Player One Hit</button>
+    <button id="p2hit" onclick="p2drawOne()">Player Two Hit</button>
     <button id="stay">Stay</button>
     </div>
-    <button id="reset" placeholder="Reset Game">Reset Game</button>
+    <button id="reset" onclick="window.location.reload()" placeholder="Reset Game">Reset Game</button>
+    <button id="startGame" placeholder="Start Game" onclick="startGame()">Start Game</button>
 </footer>
     <script src="script.js"></script>
 </body>

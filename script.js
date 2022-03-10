@@ -24,40 +24,79 @@ let playerTwoBlackjacks = 0
 let playerOneBusts = 0
 let playerTwoBusts = 0
 
+playerOneCardOne = document.getElementById('player1', 'card-slot1')
 
 
 
-// console.log(newDeck[1])
-// console.log(newDeck)
-// I have an array obj cards. A function shuffle() that shuffles cards obj when called
 
-// function startGame(){
-//     if(player2Turn === false){
-//         roundsPlayed++
-//         player2Turn === true
-//         for(i=0;i<=10;i++)
-//     }
-// }
-
-function draw(cardStack){
-    firstCard = cardStack[0]
-    console.log(cardStack[0])
-    if(player2Turn === false){
-    playerOneHand = cardStack.splice
-} else playerTwoHand = playerTwoHand.push(firstCard)
+function startGame(){
+firstCard = newDeck.pop()
+secondCard = newDeck.pop()
+p2firstCard = newDeck.pop()
+p2SecondCard = newDeck.pop()
+playerOneHand.push(firstCard,secondCard)
+playerTwoHand.push(p2firstCard, p2SecondCard)
+playerOneValue.push(firstCard.value,secondCard.value)
+playerTwoValue.push(p2firstCard.value, p2SecondCard.value)
+totalCardsDrawn += 4
+console.log(playerOneHand)
+console.log(playerTwoHand)
+console.log(playerOneValue)
+console.log(playerTwoValue)
 }
 
-console.log(cardStack[0].image)
-console.log(cardStack)
-cardStack.push(playerOneHand)
-console.log(cardStack)
-console.log(playerOneHand)
+function p1drawOne(){
+  x = newDeck.pop()
+  playerOneHand.push(x)
+  playerOneValue.push(x.value)
+  totalCardsDrawn += 1
+  console.log(playerOneHand)
+    }
+    
+    function p2drawOne(){
+        x = newDeck.pop()
+        playerTwoHand.push(x)
+        playerTwoValue.push(x.value)
+        totalCardsDrawn += 1
+        console.log(playerTwoHand)
+          }
+
+          function p1Sum() {
+            sum = 0;
+            for (let i = 0; i < playerOneValue.length; i++) {
+              sum += playerOneValue[i];
+            }
+            return sum
+          }
+
+          function p2Sum() {
+            sum = 0;
+            for (let i = 0; i < playerTwoValue.length; i++) {
+              sum += playerTwoValue[i];
+            }
+            return sum
+          }
+            
+
+
+
+          
+
+
+
+
+
+
+
+
+
+// console.log(cardStack[0].image)
+// console.log(cardStack)
+// cardStack.push(playerOneHand)
+// console.log(cardStack)
+// console.log(playerOneHand)
 // draw(cardStack)
 // console.log(playerOneHand)
-// Once the game has started. Cards already shuffled. My thinking is i can Push that top card in to
-// a hand. Need to set alternating turns for players
-// I need to get something visual i I can see
-// Need to fix the grid template
 
 
 
