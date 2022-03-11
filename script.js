@@ -25,7 +25,7 @@ let playerOneBusts = 0
 let playerTwoBusts = 0
 
 playerOneCardOne = document.getElementById('player1', 'card-slot1')
-
+valueP1Hand = document.getElementById('currentValue-player1')
 
 
 
@@ -39,6 +39,8 @@ playerTwoHand.push(p2firstCard, p2SecondCard)
 playerOneValue.push(firstCard.value,secondCard.value)
 playerTwoValue.push(p2firstCard.value, p2SecondCard.value)
 totalCardsDrawn += 4
+p1Sum()
+p2Sum()
 console.log(playerOneHand)
 console.log(playerTwoHand)
 console.log(playerOneValue)
@@ -50,6 +52,7 @@ function p1drawOne(){
   playerOneHand.push(x)
   playerOneValue.push(x.value)
   totalCardsDrawn += 1
+  p1Sum()
   console.log(playerOneHand)
     }
     
@@ -58,13 +61,14 @@ function p1drawOne(){
         playerTwoHand.push(x)
         playerTwoValue.push(x.value)
         totalCardsDrawn += 1
+        p2Sum()
         console.log(playerTwoHand)
           }
 
           function p1Sum() {
             sum = 0;
             for (let i = 0; i < playerOneValue.length; i++) {
-              sum += playerOneValue[i];
+              player1Sum += playerOneValue[i];
             }
             return sum
           }
@@ -72,10 +76,19 @@ function p1drawOne(){
           function p2Sum() {
             sum = 0;
             for (let i = 0; i < playerTwoValue.length; i++) {
-              sum += playerTwoValue[i];
+              player2Sum += playerTwoValue[i];
             }
             return sum
           }
+
+          // function checkP1Sum(){
+          //   if (player1Sum === 21){
+          //     alert('BlackJack!')
+          //   } 
+          // }
+
+          // function checkForWinners()
+
             
 
 
