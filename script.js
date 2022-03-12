@@ -24,27 +24,32 @@ let playerTwoBlackjacks = 0
 let playerOneBusts = 0
 let playerTwoBusts = 0
 
-playerOneCardOne = document.getElementById('player1', 'card-slot1')
-valueP1Hand = document.getElementById('currentValue-player1')
-
-
+// playerOneCardOne = document.getElementById('player1', 'card-slot1')
+let p1Score = document.getElementsByClassName('player1-score')
+let p2Score = document.getElementsByClassName('player2-score')
+let p1Value = document.getElementsByClassName('currentValue-player1')
+let p2Value = document.getElementsByClassName('currentValue-player2')
+// console.log(p1Score)
 
 function startGame(){
-firstCard = newDeck.pop()
-secondCard = newDeck.pop()
-p2firstCard = newDeck.pop()
-p2SecondCard = newDeck.pop()
-playerOneHand.push(firstCard,secondCard)
-playerTwoHand.push(p2firstCard, p2SecondCard)
-playerOneValue.push(firstCard.value,secondCard.value)
-playerTwoValue.push(p2firstCard.value, p2SecondCard.value)
-totalCardsDrawn += 4
-p1Sum()
-p2Sum()
-console.log(playerOneHand)
-console.log(playerTwoHand)
-console.log(playerOneValue)
-console.log(playerTwoValue)
+  firstCard = newDeck.pop()
+  secondCard = newDeck.pop()
+  p2firstCard = newDeck.pop()
+  p2SecondCard = newDeck.pop()
+  playerOneHand.push(firstCard,secondCard)
+  playerTwoHand.push(p2firstCard, p2SecondCard)
+  playerOneValue.push(firstCard.value,secondCard.value)
+  playerTwoValue.push(p2firstCard.value, p2SecondCard.value)
+  totalCardsDrawn += 4
+  p1Sum()
+  p2Sum()
+  checkP1Sum()
+  checkP2Sum()
+  changeValueText()
+  console.log(playerOneHand)
+  console.log(playerTwoHand)
+  console.log(playerOneValue)
+  console.log(playerTwoValue)
 }
 
 function p1drawOne(){
@@ -53,41 +58,106 @@ function p1drawOne(){
   playerOneValue.push(x.value)
   totalCardsDrawn += 1
   p1Sum()
+  checkP1Sum()
+  changeValueText()
   console.log(playerOneHand)
-    }
-    
-    function p2drawOne(){
-        x = newDeck.pop()
-        playerTwoHand.push(x)
-        playerTwoValue.push(x.value)
-        totalCardsDrawn += 1
-        p2Sum()
-        console.log(playerTwoHand)
-          }
+}
 
-          function p1Sum() {
-            sum = 0;
-            for (let i = 0; i < playerOneValue.length; i++) {
-              player1Sum += playerOneValue[i];
+function p2drawOne(){
+  x = newDeck.pop()
+  playerTwoHand.push(x)
+  playerTwoValue.push(x.value)
+  totalCardsDrawn += 1
+  p2Sum()
+  checkP2Sum()
+  changeValueText()
+  console.log(playerTwoHand)
+}
+
+function p1Sum() {
+  player1Sum = 0;
+  for (let i = 0; i < playerOneValue.length; i++) {
+    player1Sum += playerOneValue[i];
+  }
+  return player1Sum
+}
+
+function p2Sum() {
+  player2Sum = 0;
+  for (let i = 0; i < playerTwoValue.length; i++) {
+    player2Sum += playerTwoValue[i];
+  }
+  return player2Sum
+}
+
+function checkP1Sum(){
+  if(player1Sum === 21){
+    alert('Blackjack')
+    playerOneBlackjacks++
+    playerOneWins++
+    changeScoreText()
+    reset()
+  }else if (player1Sum > 21){
+              alert('Bust!')
+              playerOneBusts++
+              playerTwoWins++
+              changeScoreText()
+              reset()
+            }else if(player1Sum < 21) {
+              console.log('P1 hand is less than 21')
             }
-            return sum
           }
 
-          function p2Sum() {
-            sum = 0;
-            for (let i = 0; i < playerTwoValue.length; i++) {
-              player2Sum += playerTwoValue[i];
+          // Thinking I can reset certain values inside these checkSum functions
+          // Example reset each players hand and hand values
+          // when you hit blackjack or bust 
+          // making it you can play more then one hand
+          // Keep the win scores stats etc but reset what you need empty
+          // In order to play a new hand
+
+          function checkP2Sum(){
+            if(player2Sum === 21){
+              alert('Blackjack')
+              playerTwoBlackjacks++
+              playerTwoWins++
+              changeScoreText()
+              reset()
+            }else if (player2Sum > 21){
+              alert('Bust!')
+              playerOneBusts++
+              playerOneWins++
+              changeScoreText()
+              reset()
+            }else if (player2Sum < 21) {
+              console.log('P2 hand is less than 21')
             }
-            return sum
           }
 
-          // function checkP1Sum(){
-          //   if (player1Sum === 21){
-          //     alert('BlackJack!')
-          //   } 
-          // }
+          function reset(){
+            playerOneHand = []
+            playerTwoHand = []
+            player1Sum = 0
+            player2Sum = 0
+            playerOneValue = []
+            playerTwoValue = []
+          }
 
-          // function checkForWinners()
+          function changeScoreText(){
+            p1Score[0].innerHTML = `Player One Score: ${playerOneWins}`
+            p2Score[0].innerHTML = `Player Two Score: ${playerTwoWins}`
+          }
+
+          function changeValueText(){
+            p1Value[0].innerHTML = `Total: ${player1Sum}`
+            p2Value[0].innerHTML = `Total: ${player2Sum}`
+          }
+
+
+         
+
+
+
+  
 
             
 
