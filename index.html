@@ -11,30 +11,34 @@
 </head>
 <body>
     <header>
-     <div class="player1-score">Player One Score: 0</div>
+     <div class="player1-score">Player Score: 0</div>
     <h1>Black-Jack</h1>
-    <div class="player2-score">Player Two Score: 0</div>
+    <div class="player2-score">Dealer Score: 0</div>
     </header>
     
 <div class="container">
-    <div class="deck">Deck</div>
-    <div class="currentValue-player1">0</div>
-    <div class="player1 card-slot1">Player One card slot one</div>
-    <div class="player1 card-slot2">Player One card slot two</div>
-    <div class="currentValue-player2">0</div>
-    <div class="player2 card-slot1">Player two card slot one</div>
-    <div class="player2 card-slot2">Player two card slot two</div>
+    <div class="deck">Cards: 52</div>
+    <div class="currentValue-player1">Player Total: 0</div>
+    <div class="player1 card-slot1">
+        <img src="images/9317965-playing-card-back-side-60x90-mm.webp" width="113" height="157">
+        </div>
+    <div class="currentValue-player2">Dealer Total: 0</div>
+    <div class="player2 card-slot1">
+        <img src="images/9317965-playing-card-back-side-60x90-mm.webp" width="113" height="157">
+        </div>
     </div>
     
 
 
 <footer>
     <div class="options">
-    <button id="p1hit" onclick="p1drawOne()">Player One Hit</button>
-    <button id="p2hit" onclick="p2drawOne()">Player Two Hit</button>
+    <button id="p1hit" onclick="p1drawOne()">Player Hit</button>
+    <button id="p2hit" onclick="p2drawOne()">Dealer Hit</button>
+    <button id="bothStay" onclick="compareStayValues()">Compare Hands</button>
     </div>
     <button id="reset" onclick="window.location.reload()" placeholder="Reset Game">Reset Game</button>
     <button id="startGame" placeholder="Start Game" onclick="startGame()">First Deal</button>
+
 </footer>
     <script src="script.js"></script>
 </body>
