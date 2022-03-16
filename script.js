@@ -152,8 +152,8 @@ function checkP1Sum(){
           }
 
           function changeValueText(){
-            p1Value[0].innerHTML = `Total: ${player1Sum}`
-            p2Value[0].innerHTML = `Total: ${player2Sum}`
+            p1Value[0].innerHTML = `Player Total: ${player1Sum}`
+            p2Value[0].innerHTML = `Dealer Total: ${player2Sum}`
           }
 
           function compareStayValues(){
@@ -174,7 +174,7 @@ function checkP1Sum(){
           }
 
           function changeDeckCount(){
-            deckCount[0].innerHTML = `Cards: ${newDeck.length}`
+            deckCount[0].innerHTML = `Cards left in Deck: ${newDeck.length}`
           }
 
 function getImageUrls (){
@@ -183,8 +183,8 @@ function getImageUrls (){
     let z = document.createElement('div')
     a = playerOneHand[i].image
     b = playerTwoHand[i].image
-    y.innerHTML += `<img src='${a}' width:113 height:157>`
-    z.innerHTML += `<img src='${b}' width:113 height:157>`
+    y.innerHTML = `<img src='${a}' width:113 height:157>`
+    z.innerHTML = `<img src='${b}' width:113 height:157>`
     console.log(y)
     console.log(z)
     cardSlot1 = p1Card1[0]
@@ -194,6 +194,26 @@ function getImageUrls (){
 
   }
 }
+
+// function p1Images(){
+//   for(let i = 0; i <= playerOneHand.length; i++)
+//   createCard = document.createElement('div')
+//   cardURL = playerOneHand[i].image
+//   createCard.innerHTML = `<img src='${cardURL}'`
+//   cardSlot1 = p1Card1[0]
+//   cardSlot1.appendChild(createCard)
+
+// }
+
+// function removeInactiveCards(playerOneHand, playerTwoHand){
+//   for(let i = 0, j=0; i < playerOneHand.length, j < playerTwoHand.length;i++, j++){
+//     console.log(playerOneHand[i].image)
+//     console.log(j.image)
+// if(playerOneHand[i] !== playerOneHand[i]){
+// document.removeElement()
+// }
+// //   }
+// // }
 
 
 
