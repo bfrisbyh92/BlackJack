@@ -24,12 +24,15 @@ let playerTwoBlackjacks = 0
 let playerOneBusts = 0
 let playerTwoBusts = 0
 
-// playerOneCardOne = document.getElementById('player1', 'card-slot1')
+let deckCount = document.getElementsByClassName('deck')
 let p1Score = document.getElementsByClassName('player1-score')
 let p2Score = document.getElementsByClassName('player2-score')
 let p1Value = document.getElementsByClassName('currentValue-player1')
 let p2Value = document.getElementsByClassName('currentValue-player2')
-// console.log(p1Score)
+let p1Card1 = document.getElementsByClassName('player1 card-slot1')
+let p2Card1 = document.getElementsByClassName('player2 card-slot1')
+
+// console.log(p1Card1)
 
 function startGame(){
   firstCard = newDeck.pop()
@@ -45,7 +48,9 @@ function startGame(){
   p2Sum()
   checkP1Sum()
   checkP2Sum()
+  getImageUrls()
   changeValueText()
+  changeDeckCount()
   console.log(playerOneHand)
   console.log(playerTwoHand)
   console.log(playerOneValue)
@@ -60,6 +65,8 @@ function p1drawOne(){
   p1Sum()
   checkP1Sum()
   changeValueText()
+  changeDeckCount()
+  getImageUrls()
   console.log(playerOneHand)
 }
 
@@ -71,6 +78,8 @@ function p2drawOne(){
   p2Sum()
   checkP2Sum()
   changeValueText()
+  changeDeckCount()
+  getImageUrls()
   console.log(playerTwoHand)
 }
 
@@ -108,12 +117,7 @@ function checkP1Sum(){
             }
           }
 
-          // Thinking I can reset certain values inside these checkSum functions
-          // Example reset each players hand and hand values
-          // when you hit blackjack or bust 
-          // making it you can play more then one hand
-          // Keep the win scores stats etc but reset what you need empty
-          // In order to play a new hand
+
 
           function checkP2Sum(){
             if(player2Sum === 21){
@@ -124,7 +128,7 @@ function checkP1Sum(){
               reset()
             }else if (player2Sum > 21){
               alert('Bust!')
-              playerOneBusts++
+              playerTwoBusts++
               playerOneWins++
               changeScoreText()
               reset()
@@ -143,14 +147,55 @@ function checkP1Sum(){
           }
 
           function changeScoreText(){
-            p1Score[0].innerHTML = `Player One Score: ${playerOneWins}`
-            p2Score[0].innerHTML = `Player Two Score: ${playerTwoWins}`
+            p1Score[0].innerHTML = `Player Score: ${playerOneWins}`
+            p2Score[0].innerHTML = `Dealer Score: ${playerTwoWins}`
           }
 
           function changeValueText(){
             p1Value[0].innerHTML = `Total: ${player1Sum}`
             p2Value[0].innerHTML = `Total: ${player2Sum}`
           }
+
+          function compareStayValues(){
+            if(player1Sum < player2Sum){
+              playerTwoWins++
+              changeScoreText()
+              reset()
+              changeValueText()
+            } else if (player1Sum > player2Sum) {
+              playerOneWins++
+              changeScoreText()
+              reset()
+              changeValueText()
+            } else {
+              reset()
+              changeValueText()
+            }
+          }
+
+          function changeDeckCount(){
+            deckCount[0].innerHTML = `Cards: ${newDeck.length}`
+          }
+
+function getImageUrls (){
+  for(let i = 0, j=0; i < playerOneHand.length, j < playerTwoHand.length;i++, j++){
+    let y = document.createElement('div')
+    let z = document.createElement('div')
+    a = playerOneHand[i].image
+    b = playerTwoHand[i].image
+    y.innerHTML += `<img src='${a}' width:113 height:157>`
+    z.innerHTML += `<img src='${b}' width:113 height:157>`
+    console.log(y)
+    console.log(z)
+    cardSlot1 = p1Card1[0]
+    cardSlot1.appendChild(y)
+    dealerSlot1 = p2Card1[0]
+    dealerSlot1.appendChild(z)
+
+  }
+}
+
+
 
 
          
