@@ -10,6 +10,20 @@ header {
     display: inline-flex;
 }
 
+img {
+    height: 150px;px;
+    width: 100px;
+    border-radius: 12px;
+}
+
+.player1 {
+    display: inline-flex;
+}
+
+.player2 {
+    display: inline-flex;
+}
+
 #startGame {
     background-color: blue;
     color: aliceblue;
@@ -21,6 +35,13 @@ header {
     background-color: red;
     color: aliceblue;
     border-radius: 50%;
+    padding: 10px;
+}
+
+#bothStay {
+    background: rgb(195, 198, 201);
+    color: black;
+    border-radius: 8px;
     padding: 10px;
 }
 
