@@ -3,8 +3,6 @@ let cardStack = newDeck
 // console.log(cardStack)
 let playerOneHand = []
 let playerTwoHand = []
-let p1Aces = 0
-let p2Aces = 0
 let playerOneValue = []
 let playerTwoValue = []
 let player1Sum = 0
@@ -23,6 +21,9 @@ let playerOneBlackjacks = 0
 let playerTwoBlackjacks = 0
 let playerOneBusts = 0
 let playerTwoBusts = 0
+let p1Images = []
+let p2Images = []
+let a;
 
 let deckCount = document.getElementsByClassName('deck')
 let p1Score = document.getElementsByClassName('player1-score')
@@ -44,11 +45,13 @@ function startGame(){
   playerOneValue.push(firstCard.value,secondCard.value)
   playerTwoValue.push(p2firstCard.value, p2SecondCard.value)
   totalCardsDrawn += 4
+  getImageUrls()
+  renderP1()
+  renderP2()
   p1Sum()
   p2Sum()
   checkP1Sum()
   checkP2Sum()
-  getImageUrls()
   changeValueText()
   changeDeckCount()
   console.log(playerOneHand)
@@ -62,11 +65,12 @@ function p1drawOne(){
   playerOneHand.push(x)
   playerOneValue.push(x.value)
   totalCardsDrawn += 1
+  getImageUrls()
+  renderP1()
   p1Sum()
   checkP1Sum()
   changeValueText()
   changeDeckCount()
-  getImageUrls()
   console.log(playerOneHand)
 }
 
@@ -75,11 +79,12 @@ function p2drawOne(){
   playerTwoHand.push(x)
   playerTwoValue.push(x.value)
   totalCardsDrawn += 1
+  getImageUrls()
+  renderP2()
   p2Sum()
   checkP2Sum()
   changeValueText()
   changeDeckCount()
-  getImageUrls()
   console.log(playerTwoHand)
 }
 
@@ -179,74 +184,60 @@ function checkP1Sum(){
 
 function getImageUrls (){
   for(let i = 0, j=0; i < playerOneHand.length, j < playerTwoHand.length;i++, j++){
-    let y = document.createElement('div')
-    let z = document.createElement('div')
+    // let y = document.createElement('div')
+    // let z = document.createElement('div')
     a = playerOneHand[i].image
-    b = playerTwoHand[i].image
-    y.innerHTML = `<img src='${a}' width:113 height:157>`
-    z.innerHTML = `<img src='${b}' width:113 height:157>`
-    console.log(y)
-    console.log(z)
-    cardSlot1 = p1Card1[0]
-    cardSlot1.appendChild(y)
-    dealerSlot1 = p2Card1[0]
-    dealerSlot1.appendChild(z)
-
+    b = playerTwoHand[j].image
+    console.log(a)
+    console.log(b)
+    // y.innerHTML = `<img src='${a}' width:113 height:157>`
+    // z.innerHTML = `<img src='${b}' width:113 height:157>`
+    // cardSlot1 = p1Card1[0]
+    // cardSlot1.appendChild(y)
+    // dealerSlot1 = p2Card1[0]
+    // dealerSlot1.appendChild(z)
+p1Images.push(a)
+p2Images.push(b)
   }
 }
 
-// function p1Images(){
-//   for(let i = 0; i <= playerOneHand.length; i++)
-//   createCard = document.createElement('div')
-//   cardURL = playerOneHand[i].image
-//   createCard.innerHTML = `<img src='${cardURL}'`
-//   cardSlot1 = p1Card1[0]
-//   cardSlot1.appendChild(createCard)
-
-// }
-
-// function removeInactiveCards(playerOneHand, playerTwoHand){
-//   for(let i = 0, j=0; i < playerOneHand.length, j < playerTwoHand.length;i++, j++){
-//     console.log(playerOneHand[i].image)
-//     console.log(j.image)
-// if(playerOneHand[i] !== playerOneHand[i]){
-// document.removeElement()
-// }
-// //   }
-// // }
+function renderP1(){
+  for(let i = 0; i <= p1Images.length - 1;i++){
+    console.log(p1Images[i])
+      let p1Show = document.createElement('div')
+  p1Show.className = 'p1Show'
+  p1Show.innerHTML = `<img src='${p1Images[i]}'> `
+  p1Card1[0].appendChild(p1Show)
+  }
+  }
 
 
 
 
-         
-
-
-
+function renderP2(){
+  for(let i = 0; i <= p2Images.length - 1;i++){
+    console.log(p2Images[i])
+  let p2Show = document.createElement('div')
+  p2Show.className = 'p2Show'
+  p2Show.innerHTML = `<img src='${p2Images[i]}'> `
+  p2Card1[0].appendChild(p2Show)
   
+} 
+}
 
-            
-
-
-
-          
-
-
-
-
-
+// function resetImages(){
+// // p1Card1[0].parentNode.removeChild(p1Show)
+// // p2Card1[0].parentNode.removeChild(p2Show)
+//   p1Card1[0].remove('p1Show')
+//   p2Card1[0].remove('p2Show')
+// }
 
 
-
-
-// console.log(cardStack[0].image)
-// console.log(cardStack)
-// cardStack.push(playerOneHand)
-// console.log(cardStack)
-// console.log(playerOneHand)
-// draw(cardStack)
-// console.log(playerOneHand)
-
-
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
+  }
 
 
 
