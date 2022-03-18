@@ -1,6 +1,5 @@
 # BlackJack
-
-A simple game of BlackJack. Player and Dealer for the first hand are dealt two cards each. You can then draw a card or "stay". The goal is to have the sum of your hand be greater than the dealers sum without going above 21. 
+###### [https://bfrisbyh92.github.io/BlackJack/](https://bfrisbyh92.github.io/BlackJack/)
 
 ### Screenshot
 ![Screenshot](images/Screen%20Shot%202022-03-17%20at%207.32.16%20PM.png)
@@ -9,6 +8,22 @@ A simple game of BlackJack. Player and Dealer for the first hand are dealt two c
 1. HTML
 2. CSS
 3. Javascript
+
+#### Directory Tree
+
+├── README.md
+├── alt.css
+├── cards.js
+├── images
+│   ├── 9317965-playing-card-back-side-60x90-mm.webp
+│   ├── Screen Shot 2022-03-03 at 5.09.22 PM.png
+│   ├── Screen Shot 2022-03-09 at 12.00.44 PM.png
+│   ├── Screen Shot 2022-03-15 at 8.54.03 PM.png
+│   ├── Screen Shot 2022-03-17 at 7.32.16 PM.png
+│   └── backgroundImage.png
+├── index.html
+├── script.js
+└── style.css
 
 ##### Wireframe
 ![Wireframe](images/Screen%20Shot%202022-03-03%20at%205.09.22%20PM.png)
