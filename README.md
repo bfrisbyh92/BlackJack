@@ -18,6 +18,9 @@ A simple game of BlackJack. Player and Dealer for the first hand are dealt two c
 Dealer doesn't automate decisions. 
 
 I didn't add the option for Aces to be 1 or 11 yet.
+
+Have not cleaned up the code.
+ 
 #### **Major Hurdles**
 
 Getting the deckofcardsAPI to work for me. Ultimately, I took their object of a deck of cards and pasted in my own javascript to use. 
