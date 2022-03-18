@@ -61,6 +61,7 @@ function startGame(){
 }
 
 function p1drawOne(){
+  // removeAllChildNodes(p1Card1[0])
   x = newDeck.pop()
   playerOneHand.push(x)
   playerOneValue.push(x.value)
