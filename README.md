@@ -30,13 +30,13 @@
 
 #### **Unsolved Problems**
 
-Dealer doesn't automate decisions. 
+Dealer doesn't automate decisions. I can go remove the dealer hit entirely and base those decisions on if the dealers current value is greater than 17 or less than 17. It was a mistake not doing that from the start. 
 
-I didn't add the option for Aces to be 1 or 11 yet.
+I Have not cleaned up the code. I have not deleted unnecessary declarations, console.logs, and alerts.
 
-Have not cleaned up the code because I had an issue with the card images. 
+No option for Aces to be 1 or 11 right now
 
-When you hit a blackjack/bust, that card image does not show up in your hand visually. It just resets hands and updates the score. A set timeout would work to fix it. Changing the order the functions are called could be a solution also.
+When you hit a blackjack/bust, that card image does not show up in your hand visually. It just resets the hands and updates the score. A set timeout could work to fix it. Changing the order the functions are called could be a solution may fix it. 
  
 #### **Major Hurdles**
 
