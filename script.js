@@ -260,7 +260,7 @@ function renderP1(){
 
   
 function winner(){
-  if(newDeck.length <= 6)
+  if(newDeck.length == 0)
   if(playerOneWins > playerTwoWins)
 {
     document.body.style.backgroundColor = "black"
