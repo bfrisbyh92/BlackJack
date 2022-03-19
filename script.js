@@ -128,13 +128,13 @@ function p2Sum() {
 
 function checkP1Sum(){
   if(player1Sum === 21){
-    alert('Blackjack')
+    alert('Player Blackjack!')
     playerOneBlackjacks++
     playerOneWins++
     changeScoreText()
     reset()
   }else if (player1Sum > 21){
-              alert('Bust!')
+              alert('Player Bust!')
               playerOneBusts++
               playerTwoWins++
               changeScoreText()
@@ -148,13 +148,13 @@ function checkP1Sum(){
 
           function checkP2Sum(){
             if(player2Sum === 21){
-              alert('Blackjack')
+              alert('Dealer Blackjack!')
               playerTwoBlackjacks++
               playerTwoWins++
               changeScoreText()
               reset()
             }else if (player2Sum > 21){
-              alert('Bust!')
+              alert('Dealer Bust!')
               playerTwoBusts++
               playerOneWins++
               changeScoreText()
@@ -260,7 +260,7 @@ function renderP1(){
 
   
 function winner(){
-  if(newDeck.length <= 5)
+  if(newDeck.length <= 6)
   if(playerOneWins > playerTwoWins)
 {
     document.body.style.backgroundColor = "black"
