@@ -192,11 +192,13 @@ function checkP1Sum(){
               changeScoreText()
               reset()
               changeValueText()
+              winner()
             } else if (player1Sum > player2Sum) {
               playerOneWins++
               changeScoreText()
               reset()
               changeValueText()
+              winner()
             } else {
               reset()
               changeValueText()
@@ -257,4 +259,21 @@ function renderP1(){
 
 
   
+function winner(){
+  if(newDeck.length <= 5)
+  if(playerOneWins > playerTwoWins)
+{
+    document.body.style.backgroundColor = "black"
+    document.body.innerHTML = "Player Wins!"
+    document.body.style.color = "white"
+    document.body.style.fontSize = "40px"
+    document.body.style.height = "50vh"
+  }else {
+    document.body.style.backgroundColor = "black"
+    document.body.innerHTML = "Dealer Wins!"
+    document.body.style.color = "white"
+    document.body.style.fontSize = "40px"
+    document.body.style.height = " 50vh"
+  }
 
+}
